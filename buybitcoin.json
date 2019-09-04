@@ -1,0 +1,343 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "buy bitcoin",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "I want help",
+                        "I need help please",
+                        "help please",
+                        "I need help",
+                        "help me please",
+                        "help me",
+                        "help",
+                        "please help",
+                        "please help me",
+                        "what can I do",
+                        "what can you do",
+                        "how to start",
+                        "where should I start",
+                        "what now",
+                        "now what"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "stop talking",
+                        "have a good day",
+                        "farewell",
+                        "adios",
+                        "good bye",
+                        "silence",
+                        "go away",
+                        "stop",
+                        "please stop",
+                        "bye bye",
+                        "quit",
+                        "exit",
+                        "abort",
+                        "shut up",
+                        "quiet"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "HowMuchIsCryptoInFiat",
+                    "slots": [
+                        {
+                            "name": "crypto",
+                            "type": "cryptoCoin",
+                            "samples": [
+                                "{crypto}"
+                            ]
+                        },
+                        {
+                            "name": "fiat",
+                            "type": "fiatCoin",
+                            "samples": [
+                                "{fiat}"
+                            ]
+                        },
+                        {
+                            "name": "integer",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "decimal",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "how much is dot {decimal} {crypto} in {fiat}",
+                        "how much is point {decimal} {crypto} in {fiat}",
+                        "how much is {integer} dot {decimal} {crypto} in {fiat}",
+                        "how much is {integer} point {decimal} {crypto} in {fiat}",
+                        "how much is {integer} {crypto} in {fiat}"
+                    ]
+                },
+                {
+                    "name": "HowManyCryptoCanIBuy",
+                    "slots": [
+                        {
+                            "name": "crypto",
+                            "type": "cryptoCoin",
+                            "samples": [
+                                "{crypto}"
+                            ]
+                        },
+                        {
+                            "name": "fiat",
+                            "type": "fiatCoin",
+                            "samples": [
+                                "{fiat}"
+                            ]
+                        },
+                        {
+                            "name": "integer",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "decimal",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "how much {crypto} can i buy with dot {decimal} {fiat}",
+                        "how much {crypto} can i buy with {integer} dot {decimal} {fiat}",
+                        "how much {crypto} can i buy with point {decimal} {fiat}",
+                        "how much {crypto} can i buy with {integer} point {decimal} {fiat}",
+                        "how much {crypto} can i buy with {integer} {fiat}",
+                        "how many {crypto} can i buy with dot {decimal} {fiat}",
+                        "how many {crypto} can i buy with {integer} dot {decimal} {fiat}",
+                        "how many {crypto} can i buy with point {decimal} {fiat}",
+                        "how many {crypto} can i buy with {integer} point {decimal} {fiat}",
+                        "how many {crypto} can i buy with {integer} {fiat}",
+                        "how much {crypto} can i buy for dot {decimal} {fiat}",
+                        "how much {crypto} can i buy for {integer} dot {decimal} {fiat}",
+                        "how much {crypto} can i buy for point {decimal} {fiat}",
+                        "how much {crypto} can i buy for {integer} point {decimal} {fiat}",
+                        "how much {crypto} can i buy for {integer} {fiat}",
+                        "how many {crypto} can i buy for dot {decimal} {fiat}",
+                        "how many {crypto} can i buy for {integer} dot {decimal} {fiat}",
+                        "how many {crypto} can i buy for point {decimal} {fiat}",
+                        "how many {crypto} can i buy for {integer} point {decimal} {fiat}",
+                        "how many {crypto} can i buy for {integer} {fiat}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": [
+                        "can you repeat",
+                        "say it once again please",
+                        "say it once again",
+                        "once again please",
+                        "once again",
+                        "one more time please",
+                        "one more time",
+                        "i want to hear that again",
+                        "i want to hear it again",
+                        "say it again please",
+                        "say it again",
+                        "please replay",
+                        "replay please",
+                        "replay",
+                        "let's hear it once again",
+                        "please repeat that",
+                        "please repeat",
+                        "say that again please",
+                        "can you say that again",
+                        "say what",
+                        "what's that",
+                        "I didn't understand",
+                        "I did not get that",
+                        "I didn't get that",
+                        "what was that again"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "cryptoCoin",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Bitcoin",
+                                "synonyms": [
+                                    "bitcoins",
+                                    "b.t.c.",
+                                    "btc",
+                                    "bit coin"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "fiatCoin",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "EUR",
+                                "synonyms": [
+                                    "Euros",
+                                    "Euro"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "USD",
+                                "synonyms": [
+                                    "United States dollars",
+                                    "United States dollar",
+                                    "U.S.D.",
+                                    "U.S. dollar",
+                                    "U.S. dollars",
+                                    "US dollars",
+                                    "US dollar",
+                                    "dollars",
+                                    "dollar"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "HowMuchIsCryptoInFiat",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "crypto",
+                            "type": "cryptoCoin",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1296368662143.1163511569961"
+                            }
+                        },
+                        {
+                            "name": "fiat",
+                            "type": "fiatCoin",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1296368662143.528396354843"
+                            }
+                        },
+                        {
+                            "name": "integer",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "decimal",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "HowManyCryptoCanIBuy",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "crypto",
+                            "type": "cryptoCoin",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.568092463297.1407621679265"
+                            }
+                        },
+                        {
+                            "name": "fiat",
+                            "type": "fiatCoin",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.568092463297.908269165718"
+                            }
+                        },
+                        {
+                            "name": "integer",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "decimal",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1296368662143.1163511569961",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please tell me what cryptocurrency would you like to know the price for"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1296368662143.528396354843",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please tell me what fiat currency should I use. U.S. dollars or Euros?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.568092463297.908269165718",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please tell me what fiat currency should I use. U.S. dollars or Euros?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.568092463297.1407621679265",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please tell me what cryptocurrency are you referring to"
+                    }
+                ]
+            }
+        ]
+    }
+}
